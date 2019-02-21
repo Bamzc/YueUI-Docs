@@ -96,13 +96,14 @@ YueUI 为 Vue.prototype 添加了全局方法 $message。因此在 vue instance 
 
 单独引入 `message`：
 ```javascript
-import { Toast } from 'yue-ui';
+import { MessageBox } from 'yue-ui';
 ```
-此时调用方法为 `Message(options)`。我们也为每个 type 定义了各自的方法，如 `Message.success(options)`。并且可以调用 `Message.closeAll()` 手动关闭所有实例。
+此时调用方法为 `$message(options)`。
 
 ### Options
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
+| title | 标题文字, 此属性与iconClass属性不共存 | string | — | — |
 | content | 消息文字 | string | — | — |
 | iconClass | 自定义图标的类名，会覆盖 `type` | string | — | — |
 | showCancel | 是否显示关闭按钮 | boolean | — | false |
