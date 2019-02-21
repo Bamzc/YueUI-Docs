@@ -7,8 +7,7 @@
 
 从中间出现，默认1.5秒后关闭
 
-:::配置属性options，见文末
-:::
+***配置属性options，见文末***
 
 ```html
 <template>
@@ -104,8 +103,10 @@ import { Toast } from 'yue-ui';
 | iconClass | 自定义图标的类名，会覆盖 `type` | string | — | — |
 | customClass | 自定义类名 | string | — | — |
 | duration | 显示时间, 毫秒。| number | — | 3000 |
+
 ### 方法
 调用 `toast` 或 `this.$message` 会返回当前 Toast 的实例。如果需要手动关闭实例，可以调用它的 `close` 方法。
+
 | 方法名 | 说明 |
 | ---- | ---- |
 | close | 关闭当前的 toast |
