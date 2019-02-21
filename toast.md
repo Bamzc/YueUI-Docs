@@ -1,7 +1,7 @@
 
 ## 消息提示C-toast
 
-常用于主动操作后的反馈提示
+反馈提示
 
 ### 基础用法
 
@@ -11,29 +11,29 @@
 
 ```html
 <template>
-	<div>
-		<button @click="testToast1">toast简便用法</button>
-		<button @click="testToast2">toast标准用法</button>
-	</div>
+<div>
+	<button @click="testToast1">toast简便用法</button>
+	<button @click="testToast2">toast标准用法</button>
+</div>
 </template>
 <script>
-	export default {
-		data () {},
-		methods: {
-			testToast1 () {
-				this.$toast('我是toast1')
-			}
-			testToast2 () {
-				this.$toast({
-					message: '我是toast2',
-					duration: 1500,
-					callback () {
-						console.log('执行完毕')
-					}
-				})
-			}
+export default {
+	data () {},
+	methods: {
+		testToast1 () {
+			this.$toast('我是toast1')
+		}
+		testToast2 () {
+			this.$toast({
+				message: '我是toast2',
+				duration: 1500,
+				callback () {
+					console.log('执行完毕')
+				}
+			})
 		}
 	}
+}
 </script>
 ```
 ### 不同状态
@@ -41,50 +41,51 @@
 用来显示「成功、警告、错误」类的操作反馈。
 ```html
 <template>
-	<div>
-		<button @click="testToast1">成功</button>
-		<button @click="testToast2">警告</button>
-		<button @click="testToast3">错误</button>
-	</div>
+<div>
+	<button @click="testToast1">成功</button>
+	<button @click="testToast2">警告</button>
+	<button @click="testToast3">错误</button>
+</div>
 </template>
 <script>
-	export default {
-		data () {},
-		methods: {
-			testToast1 () {
-				this.$toast({
-					message: '我是toast1',
-					duration: 1500,
-					iconClass: 'success',
-					callback () {
-						console.log('执行完毕')
-					}
-				})
-			},
-			testToast2 () {
-				this.$toast({
-					message: '我是toast2',
-					duration: 1500,
-					iconClass: 'warning',
-					callback () {
-						console.log('执行完毕')
-					}
-				})
-			},
-			testToast2 () {
-				this.$toast({
-					message: '我是toast3',
-					duration: 1500,
-					iconClass: 'error',
-					callback () {
-						console.log('执行完毕')
-					}
-				})
-			}
+export default {
+	data () {},
+	methods: {
+		testToast1 () {
+			this.$toast({
+				message: '我是toast1',
+				duration: 1500,
+				iconClass: 'success',
+				callback () {
+					console.log('执行完毕')
+				}
+			})
+		},
+		testToast2 () {
+			this.$toast({
+				message: '我是toast2',
+				duration: 1500,
+				iconClass: 'warning',
+				callback () {
+					console.log('执行完毕')
+				}
+			})
+		},
+		testToast2 () {
+			this.$toast({
+				message: '我是toast3',
+				duration: 1500,
+				iconClass: 'error',
+				callback () {
+					console.log('执行完毕')
+				}
+			})
 		}
 	}
+}
 </script>
 ```
+
 ### 全局方法
 
 YueUI 为 Vue.prototype 添加了全局方法 $toast。因此在 vue instance 中可以采用本页面中的方式调用 `toast`。
